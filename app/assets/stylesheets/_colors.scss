@@ -1,0 +1,77 @@
+// Reach Beyond USA brand palette
+// Change colors here to update both Bootstrap and custom site styles.
+
+// Core brand colors inspired by the Reach Beyond artwork.
+$rb-navy:       #082f63;
+$rb-blue-dark:  #0b4488;
+$rb-blue:       #1769b0;
+$rb-blue-light: #6fa4d5;
+$rb-sky:        #dcecf5;
+$rb-gold:       #e4a923;
+$rb-gold-light: #f5d882;
+$rb-red:        #c92f32;
+
+// Neutral and supporting colors.
+$rb-ink:        #102d4f;
+$rb-muted:      #60758c;
+$rb-ivory:      #fffaf2;
+$rb-white:      #ffffff;
+$rb-border:     #d5e0e9;
+$rb-success:    #287454;
+
+// Reusable gradients.
+$rb-gradient-primary: linear-gradient(135deg, $rb-navy 0%, $rb-blue 100%);
+$rb-gradient-sky: linear-gradient(135deg, $rb-white 0%, $rb-sky 100%);
+$rb-gradient-gold: linear-gradient(135deg, $rb-gold 0%, $rb-gold-light 100%);
+
+// Bootstrap theme overrides. These must be loaded before Bootstrap.
+$primary:   $rb-blue;
+$secondary: $rb-blue-light;
+$success:   $rb-success;
+$info:      $rb-sky;
+$warning:   $rb-gold;
+$danger:    $rb-red;
+$light:     $rb-ivory;
+$dark:      $rb-navy;
+
+$body-color:       $rb-ink;
+$body-bg:          $rb-white;
+$link-color:       $rb-blue-dark;
+$link-hover-color: $rb-navy;
+$border-color:     $rb-border;
+
+// Adds brand-specific Bootstrap helpers such as .text-brand-gold and
+// .bg-brand-sky alongside the standard .text-primary and .bg-primary.
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "brand-gold": $rb-gold,
+  "brand-sky": $rb-sky
+);
+
+// CSS variables are available in ordinary CSS, views, and JavaScript-driven
+// components without needing to know the Sass variable names.
+:root {
+  --rb-navy: #{$rb-navy};
+  --rb-blue-dark: #{$rb-blue-dark};
+  --rb-blue: #{$rb-blue};
+  --rb-blue-light: #{$rb-blue-light};
+  --rb-sky: #{$rb-sky};
+  --rb-gold: #{$rb-gold};
+  --rb-gold-light: #{$rb-gold-light};
+  --rb-red: #{$rb-red};
+  --rb-ink: #{$rb-ink};
+  --rb-muted: #{$rb-muted};
+  --rb-ivory: #{$rb-ivory};
+  --rb-white: #{$rb-white};
+  --rb-border: #{$rb-border};
+  --rb-gradient-primary: #{$rb-gradient-primary};
+  --rb-gradient-sky: #{$rb-gradient-sky};
+  --rb-gradient-gold: #{$rb-gradient-gold};
+}

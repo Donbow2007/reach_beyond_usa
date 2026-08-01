@@ -1,0 +1,10 @@
+@use '@fortawesome/fontawesome-free/scss/variables' with ($font-path: ".");
+
+@import 'colors';
+@import 'bootstrap/scss/bootstrap';
+$bootstrap-icons-font-dir: ".";
+@import 'bootstrap-icons/font/bootstrap-icons';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/brands';
