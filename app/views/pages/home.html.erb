@@ -1,0 +1,33 @@
+<% content_for :title, "Reach Beyond USA | Creating Possibilities" %>
+
+<section class="hero-section">
+  <div class="container position-relative z-1">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <p class="eyebrow mb-3">Together, we can create a better tomorrow</p>
+        <h1 class="hero-title mb-4">Together, we <span class="accent">reach beyond.</span></h1>
+        <p class="hero-copy mb-4">Empowering people, strengthening communities, and creating possibilities through education, care, service, and inspiration.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <%= link_to new_user_registration_path, class: "btn btn-primary btn-lg px-4" do %>
+            Get involved <i class="fa-solid fa-arrow-right ms-2"></i>
+          <% end %>
+          <%= link_to "Member sign in", new_user_session_path, class: "btn btn-outline-primary btn-lg px-4" %>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="row g-3">
+          <% [["fa-book-open", "Educate", "Opening doors through knowledge."], ["fa-heart", "Care", "Leading with compassion."], ["fa-hand-holding-heart", "Serve", "Showing up for our communities."], ["fa-star", "Inspire", "Creating lasting possibilities."]].each do |icon, title, copy| %>
+            <div class="col-sm-6">
+              <article class="value-card">
+                <span class="value-icon mb-3"><i class="fa-solid <%= icon %>"></i></span>
+                <h2 class="h5 text-dark"><%= title %></h2>
+                <p class="text-secondary small mb-0"><%= copy %></p>
+              </article>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

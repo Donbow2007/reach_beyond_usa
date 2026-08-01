@@ -1,0 +1,33 @@
+<% content_for :title, "Sign in | Reach Beyond USA" %>
+
+<section class="auth-section">
+  <div class="container">
+    <div class="auth-card">
+      <div class="auth-card-header">
+        <p class="small text-uppercase fw-bold mb-2 opacity-75">Welcome back</p>
+        <h1 class="h2 mb-1">Sign in</h1>
+        <p class="mb-0 opacity-75">Continue your journey with Reach Beyond USA.</p>
+      </div>
+      <div class="auth-card-body">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |form| %>
+          <div class="mb-3">
+            <%= form.label :email, class: "form-label fw-semibold" %>
+            <%= form.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "you@example.com" %>
+          </div>
+          <div class="mb-3">
+            <%= form.label :password, class: "form-label fw-semibold" %>
+            <%= form.password_field :password, autocomplete: "current-password", class: "form-control" %>
+          </div>
+          <% if devise_mapping.rememberable? %>
+            <div class="form-check mb-4">
+              <%= form.check_box :remember_me, class: "form-check-input" %>
+              <%= form.label :remember_me, class: "form-check-label" %>
+            </div>
+          <% end %>
+          <%= form.submit "Sign in", class: "btn btn-primary w-100 py-2" %>
+        <% end %>
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</section>

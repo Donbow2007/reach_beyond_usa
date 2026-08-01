@@ -1,0 +1,27 @@
+<% content_for :title, "Choose a new password | Reach Beyond USA" %>
+
+<section class="auth-section">
+  <div class="container">
+    <div class="auth-card">
+      <div class="auth-card-header">
+        <h1 class="h2 mb-1">Choose a new password</h1>
+        <p class="mb-0 opacity-75">Make it strong and memorable.</p>
+      </div>
+      <div class="auth-card-body">
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |form| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+          <%= form.hidden_field :reset_password_token %>
+          <div class="mb-3">
+            <%= form.label :password, "New password", class: "form-label fw-semibold" %>
+            <%= form.password_field :password, autofocus: true, autocomplete: "new-password", class: "form-control" %>
+          </div>
+          <div class="mb-4">
+            <%= form.label :password_confirmation, "Confirm new password", class: "form-label fw-semibold" %>
+            <%= form.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+          </div>
+          <%= form.submit "Update password", class: "btn btn-primary w-100 py-2" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

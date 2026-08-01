@@ -1,0 +1,153 @@
+body {
+  background: $rb-gradient-sky;
+}
+
+.site-navbar {
+  background: $rb-gradient-primary;
+  border-bottom: 3px solid $rb-gold;
+  box-shadow: 0 0.25rem 1rem rgba($rb-navy, 0.14);
+}
+
+.navbar-brand {
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+.brand-mark {
+  align-items: center;
+  background: $rb-gold;
+  border-radius: 50%;
+  color: $rb-navy;
+  display: inline-flex;
+  height: 2.25rem;
+  justify-content: center;
+  width: 2.25rem;
+}
+
+.flash-container {
+  min-height: 1rem;
+  padding-top: 1rem;
+}
+
+.hero-section {
+  overflow: hidden;
+  padding: clamp(4rem, 9vw, 7rem) 0;
+  position: relative;
+}
+
+.hero-section::after {
+  background: $rb-gold;
+  border-radius: 50%;
+  content: "";
+  filter: blur(1px);
+  height: 18rem;
+  opacity: 0.14;
+  position: absolute;
+  right: -6rem;
+  top: -7rem;
+  width: 18rem;
+}
+
+.eyebrow {
+  color: $rb-blue;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  color: $rb-navy;
+  font-size: clamp(2.5rem, 7vw, 5.25rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.hero-title .accent {
+  color: $rb-blue;
+}
+
+.hero-copy {
+  color: $rb-muted;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  max-width: 38rem;
+}
+
+.value-card {
+  background: rgba($rb-white, 0.82);
+  border: 1px solid rgba($rb-blue-light, 0.35);
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2.5rem rgba($rb-navy, 0.09);
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.value-icon {
+  align-items: center;
+  background: rgba($rb-gold, 0.18);
+  border-radius: 0.75rem;
+  color: $rb-blue-dark;
+  display: inline-flex;
+  font-size: 1.25rem;
+  height: 3rem;
+  justify-content: center;
+  width: 3rem;
+}
+
+.auth-section {
+  padding: clamp(2.5rem, 7vw, 5rem) 0;
+}
+
+.auth-card {
+  background: rgba($rb-white, 0.96);
+  border: 1px solid $rb-border;
+  border-radius: 1.25rem;
+  box-shadow: 0 1.5rem 3.5rem rgba($rb-navy, 0.12);
+  margin: 0 auto;
+  max-width: 34rem;
+  overflow: hidden;
+}
+
+.auth-card-header {
+  background: $rb-gradient-primary;
+  color: $rb-white;
+  padding: 2rem;
+}
+
+.auth-card-body {
+  padding: 2rem;
+}
+
+.form-control {
+  border-color: $rb-border;
+  min-height: 3rem;
+}
+
+.form-control:focus {
+  border-color: $rb-blue-light;
+  box-shadow: 0 0 0 0.25rem rgba($rb-blue, 0.13);
+}
+
+.auth-links {
+  border-top: 1px solid $rb-border;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+}
+
+.site-footer {
+  background: $rb-navy;
+  color: rgba($rb-white, 0.82);
+  font-size: 0.875rem;
+}
+
+.footer-motto {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-motto span {
+  color: $rb-gold;
+  padding: 0 0.3rem;
+}

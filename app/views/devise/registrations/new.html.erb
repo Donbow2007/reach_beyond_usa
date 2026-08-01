@@ -1,0 +1,35 @@
+<% content_for :title, "Join us | Reach Beyond USA" %>
+
+<section class="auth-section">
+  <div class="container">
+    <div class="auth-card">
+      <div class="auth-card-header">
+        <p class="small text-uppercase fw-bold mb-2 opacity-75">Be part of the change</p>
+        <h1 class="h2 mb-1">Create your account</h1>
+        <p class="mb-0 opacity-75">Join a community committed to reaching beyond.</p>
+      </div>
+      <div class="auth-card-body">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |form| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+          <div class="mb-3">
+            <%= form.label :email, class: "form-label fw-semibold" %>
+            <%= form.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "you@example.com" %>
+          </div>
+          <div class="mb-3">
+            <%= form.label :password, class: "form-label fw-semibold" %>
+            <% if @minimum_password_length %>
+              <span class="text-secondary small">(<%= @minimum_password_length %> characters minimum)</span>
+            <% end %>
+            <%= form.password_field :password, autocomplete: "new-password", class: "form-control" %>
+          </div>
+          <div class="mb-4">
+            <%= form.label :password_confirmation, class: "form-label fw-semibold" %>
+            <%= form.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+          </div>
+          <%= form.submit "Create account", class: "btn btn-primary w-100 py-2" %>
+        <% end %>
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</section>
